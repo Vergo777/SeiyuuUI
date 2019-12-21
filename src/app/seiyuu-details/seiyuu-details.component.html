@@ -1,0 +1,7 @@
+<div class="row" id="details" *ngIf="this.seiyuuDetails">
+  <div class="col-md-2 offset-md-1">
+    <img src="{{this.seiyuuDetails.image_url}}" />
+    <p id="name">{{this.seiyuuDetails.name}}</p>
+    <p id="favs">Member favourites: {{this.seiyuuDetails.member_favorites}}</p>
+  </div>
+</div>
