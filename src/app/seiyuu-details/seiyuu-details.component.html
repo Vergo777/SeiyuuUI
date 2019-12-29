@@ -2,6 +2,10 @@
   <div class="col-md-2 offset-md-1">
     <img src="{{this.seiyuuDetails.image_url}}" />
     <p id="name">{{this.seiyuuDetails.name}}</p>
-    <p id="favs">Member favourites: {{this.seiyuuDetails.member_favorites}}</p>
+    <p class="info">Member favourites: {{this.seiyuuDetails.member_favorites}}</p>
+    <p class="info">Alternate Names: {{this.seiyuuDetails.alternate_names}}</p>
+  </div>
+  <div class="col-md-5 offset-md-1">
+    <app-roles-list [voiceActingRoles]="this.seiyuuDetails.voice_acting_roles"></app-roles-list>
   </div>
 </div>

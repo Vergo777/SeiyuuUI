@@ -1,0 +1,9 @@
+.roleListElement {
+  margin: 5px;
+  text-align: left;
+}
+
+.roleListElement img {
+  width: 46px;
+  height: 64px;
+}

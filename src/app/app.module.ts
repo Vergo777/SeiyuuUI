@@ -6,12 +6,16 @@ import { SeiyuuDetailsComponent } from './seiyuu-details/seiyuu-details.componen
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RolesListComponent } from './seiyuu-details/roles-list/roles-list.component';
+import { RolesListElementComponent } from './seiyuu-details/roles-list-element/roles-list-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeiyuuDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    RolesListComponent,
+    RolesListElementComponent
   ],
   imports: [
     BrowserModule,

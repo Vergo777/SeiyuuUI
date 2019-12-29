@@ -1,0 +1,21 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#allRoles">All Roles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>
+  </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+  <div class="tab-pane fade show active" id="allRoles">
+    <ul class="list-unstyled">
+      <app-roles-list-element *ngFor="let voiceActingRole of voiceActingRoles"
+      characterImageUrl="{{voiceActingRole.character.image_url}}" characterName="{{voiceActingRole.character.name}}"
+      animeUrl="{{voiceActingRole.anime.url}}" animeName="{{voiceActingRole.anime.name}}">
+      </app-roles-list-element>
+    </ul>
+  </div>
+  <div class="tab-pane fade" id="profile">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+  </div>
+</div>

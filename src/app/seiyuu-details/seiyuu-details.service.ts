@@ -10,6 +10,6 @@ export class SeiyuuDetailsService {
   constructor(private httpClient: HttpClient) { }
 
   getSeiyuuDetails(id: number): Observable<SeiyuuDetails> {
-    return this.httpClient.get<SeiyuuDetails>("http://localhost:4200/api/seiyuu/" + id);
+    return this.httpClient.get<SeiyuuDetails>("/api/seiyuu/" + id);
   }
 }

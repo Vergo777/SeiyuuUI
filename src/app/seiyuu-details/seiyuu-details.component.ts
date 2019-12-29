@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {SeiyuuDetailsService} from "./seiyuu-details.service";
-import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-seiyuu-details',
@@ -9,7 +8,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./seiyuu-details.component.css']
 })
 export class SeiyuuDetailsComponent implements OnInit {
-  private seiyuuDetails: SeiyuuDetails;
+  seiyuuDetails: SeiyuuDetails;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,8 +23,8 @@ export class SeiyuuDetailsComponent implements OnInit {
     const id: number = +this.route.snapshot.paramMap.get('id');
     this.seiyuuDetailsService.getSeiyuuDetails(id)
       .subscribe(seiyuuDetails => {
-        console.log(seiyuuDetails);
-        this.seiyuuDetails = seiyuuDetails
+        this.seiyuuDetails = seiyuuDetails;
+        seiyuuDetails.voice_acting_roles.sort(((a, b) => a.character.name.localeCompare(b.character.name)));
       });
   }
 

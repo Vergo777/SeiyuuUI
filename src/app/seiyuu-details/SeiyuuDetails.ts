@@ -8,4 +8,5 @@ interface SeiyuuDetails {
   alternate_names: string[];
   member_favorites: number;
   about: string;
+  voice_acting_roles: VoiceActingRole[];
 }
